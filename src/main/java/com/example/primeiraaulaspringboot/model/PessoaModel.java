@@ -1,4 +1,4 @@
-package com.example.primeiraaulaspringboot;
+package com.example.primeiraaulaspringboot.model;
 
 //ela vai ser um modelo de criação pra objetos
 //do tipo PESSOA
