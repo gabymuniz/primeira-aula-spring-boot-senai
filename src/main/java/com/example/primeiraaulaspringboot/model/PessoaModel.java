@@ -7,6 +7,10 @@ public class PessoaModel {
     private int idade;
     private String cidadeNascimento;
 
+    //metodo construtor vazio
+    //Vai ser utilizado na requisição POST, PUT e DELETE
+    public PessoaModel(){};
+
     public PessoaModel(String nome, int idade, String cidadeNascimento) {
         this.nome = nome;
         this.idade = idade;
