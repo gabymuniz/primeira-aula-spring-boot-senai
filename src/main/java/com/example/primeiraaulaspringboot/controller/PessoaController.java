@@ -17,10 +17,10 @@ public class PessoaController {
         return pessoas;
     }
 
+    //localhost:8080/pessoa/adicionarPessoa
     @PostMapping("/adicionarPessoa")
     public PessoaModel adicionarPessoa(@RequestBody PessoaModel novaPessoa){
         pessoas.add(novaPessoa);
         return novaPessoa;
     }
-
 }
