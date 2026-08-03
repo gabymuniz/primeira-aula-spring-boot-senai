@@ -34,4 +34,24 @@ public class PessoaController {
         pessoas.add(novaPessoa);
         return novaPessoa;
     }
+
+    //localhost:8080/pessoa/atualizarPessoa/{nome}
+    @PutMapping("atualizarPessoa/{nomePessoa}")
+    public PessoaModel atualizarPessoa(
+            @PathVariable String nomePessoa,
+            @RequestBody PessoaModel pessoaAtualizada
+    ){
+        for (int i = 0; i < pessoas.size(); i++) {
+            PessoaModel pessoaAtual = pessoas.get(i);
+            if (pessoaAtual.getNome().equals(nomePessoa)) {
+                pessoaAtual.setNome(pessoaAtualizada.getNome());
+                pessoaAtual.setIdade(pessoaAtualizada.getIdade());
+                pessoaAtual.setCidadeNascimento(pessoaAtualizada.getCidadeNascimento());
+                return pessoaAtual;
+            }
+        }
+        return null;
+    }
+
+
 }
