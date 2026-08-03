@@ -53,5 +53,19 @@ public class PessoaController {
         return null;
     }
 
+    //localhost:8080//deletarPessoa/{nomePessoa}
+    @DeleteMapping("/deletarPessoa/{nomePessoa}")
+    public String deletarPessoa(@PathVariable String nomePessoa){
+        for (int i = 0; i < pessoas.size(); i++) {
+            PessoaModel pessoaAtual = pessoas.get(i);
+            if (pessoaAtual.getNome().equals(nomePessoa)){
+                pessoas.remove(i);
+                return "Pessoa excluida com sucesso.";
+            }
+        }
+
+        return null;
+    }
+
 
 }
