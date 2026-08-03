@@ -33,5 +33,7 @@ public class PessoaController {
     public PessoaModel adicionarPessoa(@RequestBody PessoaModel novaPessoa){
         pessoas.add(novaPessoa);
         return novaPessoa;
+
+
     }
 }
